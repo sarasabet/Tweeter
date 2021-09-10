@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(function() {
+
   console.log('foo')
   $("textarea").on('input', function() {
     const newTweet = $(this).val();   

@@ -6,12 +6,7 @@
 }
 .alert1 {
   color: red;
-  font-size: 0.75em;
-  border-radius: 3px;
   font-family: math;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(209, 186, 186);
   font-weight: bold;
   font-size: 1.2em;
@@ -19,12 +14,7 @@
 }
 .alert2 {
   color: red;
-  font-size: 0.75em;
-  border-radius: 3px;
   font-family: math;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(209, 186, 186);
   font-weight: bold;
   font-size: 1.2em;
@@ -36,8 +26,6 @@
   border-bottom: solid thin #4056A1;
   flex-direction: column;
   margin-top: 1em;
- 
-
 }
 
 .new-tweet-footer {
@@ -45,14 +33,15 @@
   justify-content: space-between;
   margin-top: 1em;
 }
+
 textarea {
   border-color: transparent;
   margin-top: 0.5em;
   font-size: 0.8em;
 }
-textarea:hover {
-  padding: 1.25em 1.25em 1.25em 1.25em;;
 
+textarea:hover {
+  padding: 1.25em 1.25em 1.25em 1.25em;
 }
 
 button {
@@ -60,27 +49,22 @@ button {
   border-radius: 8%;
   color: #FFFFFF;
   padding: 0.6%;
-  
-
 }
 
 button:hover {
   box-shadow: 20px 15px 20px rgba(11, 87, 122, 0.4);
- 
 }
 
 #tweets-container{
   display: flex;
   flex-direction: column;
   margin-top: 1em;
-  padding: 0.25em;
-  
+  padding: 0.25em;  
 }
 
 #tweets-container:hover{
   font-size: 1.1em;
 }
-
 
 .header {
   display: flex;
@@ -91,7 +75,6 @@ button:hover {
   color: #545149;
   padding-bottom: 1%;
   font-size: 0.6em;
-  
 }
 
  div.header1 {
@@ -99,7 +82,6 @@ button:hover {
    justify-content: space-between;
    color: #868684;
    font-weight: lighter;
-
  }
 
 .header img {
@@ -112,8 +94,6 @@ button:hover {
   margin-bottom: 0.2em;
   padding-left: 0.5em;
 
-
-  
 }
 
 div.name {
@@ -121,8 +101,6 @@ div.name {
   flex-grow: 60%;
   flex-grow: 6;
   padding-top: 1.5em;
-  
-
 }
 
 .handle {
@@ -136,15 +114,12 @@ div.name {
 .tweet-input-text {
   margin-top: 1em;
   background-color: #f4f1ec;
-
-
 }
+
 div.tweet {
   padding-left: 1em;
   font-size: 1.5em;
 }
-
-
 
 #footer.footer {
   display: flex;
@@ -155,9 +130,9 @@ div.tweet {
   font-size: 0.5em;
   padding-left: 1em;
 }
+
 #footer.footer:hover {
   box-shadow: 0.1px 10px rgb(148, 195, 231);
-
 }
 
 .footer-icons{
@@ -165,13 +140,13 @@ div.tweet {
   justify-content: space-between;
   color: #4056a2;
 }
+
 .fas {
   padding: 0.5em;
 }
+
 .fas:hover{
   color: red;
   padding-top: 1.1em;
-  
-
 }
 

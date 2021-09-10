@@ -5,59 +5,47 @@
  */
 // Test / driver code (temporary). Eventually will get this from the server.
 
-// const { response } = require("express");
 
-// creat an HTML template 
+(function () { //iife to make the functions not accessible from outside/ isolate / Encapsulate
+  $(function () { // newr version for $(document).ready ()=> {}
 
-(function() {
-$(document).ready(() => {
-
-  $("#submit").submit(function (event) {
-    event.preventDefault();
-    const serializedTweet = $(this).serialize();
-    console.log(event.target[0].value)
-    const trimedText = event.target[0].value.trim()
     
-    if (!trimedText || trimedText.length === 0) {
 
-      $(".alert1").slideDown(() => {
-        setTimeout(() => {
-          $(".alert1").slideUp()
-        }, 3000);
-      })
-      
-    } else if (trimedText.length > 140) {
-      $(".alert2").slideDown(() => {
-        setTimeout(() => {
-          $(".alert2").slideUp()
-        }, 3000);
-      })
-     
-    } else {
+    $("#submit").submit(function (event) {
+      event.preventDefault();
+      const serializedTweet = $(this).serialize();
+      const trimedText = event.target[0].value.trim();
 
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: serializedTweet,
-    })
-      .then(loadTweets()
-      )
-      .catch((err) => console.log(err))
-  }
+      if (!trimedText || trimedText.length === 0) {
+
+        $(".alert1").slideDown(() => {
+          setTimeout(() => {
+            $(".alert1").slideUp()
+          }, 3000);
+        })
+
+      } else if (trimedText.length > 140) {
+        $(".alert2").slideDown(() => {
+          setTimeout(() => {
+            $(".alert2").slideUp()
+          }, 3000);
+        })
+
+      } else {
+
+        $.ajax({
+          method: "POST",
+          url: "/tweets",
+          data: serializedTweet,
+        })
+          .then(loadTweets()
+          )
+          .catch((err) => console.log(err))
+      }
+    });
+
+    loadTweets();
   });
-
-  const loadTweets =() => {
-    $.ajax({
-      method: "GET",
-      url: "/tweets",
-      
-    })
-      .then((tweets) => renderTweets(tweets))
-      .catch((err) => console.log(err))
-  }
-  loadTweets()
-
-});
 })();
 
 //Use an escape function to evaluate text that comes from untrusted sources to avoid crafting input text to run JavaScript on other user's page, etc
@@ -67,10 +55,10 @@ const escape = function (str) {
   return div.innerHTML;
 };
 // takes tweet db and match each and every necessry item based on HTML tmplate
-const createTweetElement = (tweetData) => {
-  const { user, handle, avatars } = tweetData.user// restructure data
-  const text = tweetData.content.text;
-  const time = timeago.format(tweetData.created_at);  //cdn link has been pased on index/script 
+const createTweetElement = (tweetObj) => {
+  const { name, handle, avatars } = tweetObj.user// restructure data
+  const text = tweetObj.content.text;
+  const time = timeago.format(tweetObj.created_at);  //cdn link has been pased on index/script 
 
   const $item = `
     <section id="tweets-container">
@@ -98,11 +86,21 @@ const createTweetElement = (tweetData) => {
 // tahke db as an argument and loop through each obj , creat a tweet template , and prepend/add tp the top of list 
 const renderTweets = function (tweetData) {
   for (const tweet of tweetData) {
-    const tweetElement = createTweetElement(tweet)
+    const tweetElement = createTweetElement(tweet);
     $('#tweets-container').prepend(tweetElement);// use prepend insted of append 
   }
 }
 
+// get all tweets from server and if ther is no error display them , otherwise display the error 
+const loadTweets = () => {
+  $.ajax({
+    method: "GET",
+    url: "/tweets",
+
+  })
+    .then((tweets) => renderTweets(tweets))
+    .catch((err) => console.log(err))
+}
 
 
 
