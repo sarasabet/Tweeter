@@ -1,0 +1,20 @@
+header {
+  align-items: center;
+  background-color: #f0ad32;
+  background-image: url(https://www.transparenttextures.com/patterns/brushed-alum-dark.png);
+  display: flex;
+  flex-direction:column ;
+  position: relative;
+  top: 5em;
+
+}
+
+header h2 {
+  font-size: .9em;
+  margin-top: 1em;
+}
+header img{
+  margin-top: 1em;
+}
+
+

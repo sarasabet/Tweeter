@@ -1,0 +1,44 @@
+
+    /* 120 pixels in height
+    Full width of the viewport
+    #4056A1 as its default background colour
+    #FFFFF as its default font colour
+    <span> within the <nav> uses Bungee as its default font-family
+    1.5ems of space on the right and left between the content and the edges */
+
+nav {
+  background-color: #f0ad32; 
+  color: #FFFFFF;
+  display: flex;
+  font-size: 1.5em;
+  height: 120px;
+  justify-content: space-between;
+  padding: 1.5em 1.2em 1.5em 1.5em;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.nav2 {
+  display: flex;
+  font-size: 0.5em;
+}
+
+#arrow {
+  color: rgb(212, 38, 7);
+  display: flex;
+  font-size: 0.75em;
+  justify-content: center;
+}
+
+#arrow {
+  -webkit-animation: action 1s infinite  alternate;
+  animation: action 1s infinite  alternate;
+}
+@-webkit-keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
