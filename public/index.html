@@ -54,15 +54,17 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-   
     <section class="new-tweet">
-      <div class="alert"  >
-        
+      <div class="alert1">
+        <i class="fas fa-exclamation-triangle">Too short, tweet box should not be emptry!</i>
+      </div>
+      <div class="alert2">
+        <i class="fas fa-exclamation-triangle">Too long, plz respect our limit of 140 chars!</i>
       </div>
       <form id="submit" method="POST" action="/tweets">
         <div class="new-tweet-header">
           <label for="tweet-text">What are you humming about?</label>
-          <textarea class ="tweet-input-text" name="text" id="tweet-text"></textarea>
+          <textarea class="tweet-input-text" name="text" id="tweet-text"></textarea>
         </div>
         <div class="new-tweet-footer">
           <button id="btn" type="submit">Tweet</button>

@@ -8,15 +8,9 @@
 // const { response } = require("express");
 
 // creat an HTML template 
+
 (function() {
 $(document).ready(() => {
-
-  const escape = function (str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
-  
 
   const createTweetElement = (tweetData) => {
     const { user, handle, avatars } = tweetData.user
@@ -60,16 +54,16 @@ $(document).ready(() => {
     const serializedTweet = $(this).serialize();
  
     if (!event.target[0].value.trim() || event.target[0].value.trim().length === 0) {
-      $(".alert").text("Tweet should not be empty").slideDown(() => {
+      $(".alert1").slideDown(() => {
         setTimeout(() => {
-          $(".alert").slideUp()
+          $(".alert1").slideUp()
         }, 3000);
       })
       
     } else if (event.target[0].value.length > 140) {
-      $(".alert").text("Tweet should not be more than 140chars").slideDown(() => {
+      $(".alert2").slideDown(() => {
         setTimeout(() => {
-          $(".alert").slideUp()
+          $(".alert2").slideUp()
         }, 3000);
       })
      
@@ -99,6 +93,13 @@ $(document).ready(() => {
 
 });
 })();
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 
 
 

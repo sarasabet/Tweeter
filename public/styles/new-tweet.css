@@ -4,7 +4,20 @@
   flex-direction: column;
 
 }
-.alert {
+.alert1 {
+  color: red;
+  font-size: 0.75em;
+  border-radius: 3px;
+  font-family: math;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(209, 186, 186);
+  font-weight: bold;
+  font-size: 1.2em;
+  display:none
+}
+.alert2 {
   color: red;
   font-size: 0.75em;
   border-radius: 3px;
