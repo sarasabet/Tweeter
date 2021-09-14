@@ -40,10 +40,6 @@ textarea {
   font-size: 0.8em;
 }
 
-textarea:hover {
-  padding: 1.25em 1.25em 1.25em 1.25em;
-}
-
 button {
   background-color:#4056A1 ;
   border-radius: 8%;

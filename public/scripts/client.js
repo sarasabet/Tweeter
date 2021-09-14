@@ -38,10 +38,16 @@
           url: "/tweets",
           data: serializedTweet,
         })
-          .then(loadTweets()
-          )
+          .then(()=>{
+            // to clear text box, reset the char counter back to 140
+            $("#tweet-text").val("");
+            $('.counter').val(140); 
+            loadTweets();       
+            
+          })
           .catch((err) => console.log(err))
       }
+
     });
 
     loadTweets();
@@ -85,6 +91,7 @@ const createTweetElement = (tweetObj) => {
 
 // tahke db as an argument and loop through each obj , creat a tweet template , and prepend/add tp the top of list 
 const renderTweets = function (tweetData) {
+  $('#tweets-container').empty(); //clear the container 
   for (const tweet of tweetData) {
     const tweetElement = createTweetElement(tweet);
     $('#tweets-container').prepend(tweetElement);// use prepend insted of append 

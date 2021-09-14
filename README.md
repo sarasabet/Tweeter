@@ -20,5 +20,10 @@ Tweeter lets you share updates with your friends within 140 characters! Tweet an
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+  Express
+  Node 5.10.x or above
+  chance
+  md5
+  timeago.js
+
+
