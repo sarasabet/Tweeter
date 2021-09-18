@@ -91,7 +91,7 @@ const createTweetElement = (tweetObj) => {
 
 // tahke db as an argument and loop through each obj , creat a tweet template , and prepend/add tp the top of list 
 const renderTweets = function (tweetData) {
-  $('#tweets-container').empty(); //clear the container 
+  $('#tweets-container').empty(); //clear the container and avoid duplication
   for (const tweet of tweetData) {
     const tweetElement = createTweetElement(tweet);
     $('#tweets-container').prepend(tweetElement);// use prepend insted of append 
