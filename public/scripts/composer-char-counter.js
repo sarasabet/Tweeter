@@ -1,6 +1,4 @@
 $(function() {
-
-  console.log('foo')
   $("textarea").on('input', function() {
     const newTweet = $(this).val();   
     const tweetLengt = newTweet.length
@@ -12,5 +10,6 @@ $(function() {
       $counter.css( "color", "red" )     
     }  
   });
+
 });
 

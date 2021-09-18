@@ -67,7 +67,7 @@ const createTweetElement = (tweetObj) => {
   const time = timeago.format(tweetObj.created_at);  //cdn link has been pased on index/script 
 
   const $item = `
-    <section id="tweets-container">
+    <article id="tweets-container">
     <div class="header">
       <div class="header1">
       <img src="${avatars}" alt="avatar">
@@ -84,7 +84,7 @@ const createTweetElement = (tweetObj) => {
       <i class="fas fa-reply-all"></i>
       </div>
     </div>
-    </section>
+    </article>
   `
   return $item;
 };

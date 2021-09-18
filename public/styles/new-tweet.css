@@ -51,6 +51,10 @@ button:hover {
   box-shadow: 20px 15px 20px rgba(11, 87, 122, 0.4);
 }
 
+article #tweets-container:hover {
+  box-shadow:10px 10px 0px 0px rgb(164, 191, 221);
+}
+
 #tweets-container{
   display: flex;
   flex-direction: column;
@@ -58,9 +62,6 @@ button:hover {
   padding: 0.25em;  
 }
 
-#tweets-container:hover{
-  font-size: 1.1em;
-}
 
 .header {
   display: flex;
@@ -128,9 +129,7 @@ div.tweet {
   padding-left: 1em;
 }
 
-#footer.footer:hover {
-  box-shadow: 0.1px 10px rgb(148, 195, 231);
-}
+
 
 .footer-icons{
   display: flex;
@@ -146,4 +145,6 @@ div.tweet {
   color: red;
   padding-top: 1.1em;
 }
+
+
 
