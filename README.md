@@ -11,6 +11,15 @@ Tweeter lets you share updates with your friends within 140 characters! Tweet an
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Dependencies
+
+1. Express
+2. Node 5.10.x or above
+3. chance
+4. md5
+5. timeago.js
+
+
 ## Final Product
 
 !["main-desktop-view"](https://github.com/sarasabet/tweeter/blob/master/public/images/main%20page-desktop.png)
@@ -18,6 +27,7 @@ Tweeter lets you share updates with your friends within 140 characters! Tweet an
 !["table-view"](https://github.com/sarasabet/tweeter/blob/master/public/images/tablet-view.png)
 
 
+<<<<<<< HEAD
 ## Dependencies
 
   1. Express
@@ -26,4 +36,6 @@ Tweeter lets you share updates with your friends within 140 characters! Tweet an
   4. md5
   5. timeago.js
 
+=======
+>>>>>>> d01e19056d733aad0149df836d9e9d1153320a2d
 
