@@ -46,6 +46,9 @@ button {
   color: #FFFFFF;
   padding: 0.6%;
 }
+.counter{
+  padding-left: 32em;
+}
 
 button:hover {
   box-shadow: 20px 15px 20px rgba(11, 87, 122, 0.4);
@@ -66,9 +69,7 @@ article #tweets-container:hover {
 .header {
   display: flex;
   flex-direction:column;
-  border-top: 0.2em solid #504f4e;
-  border-right: 0.2em solid #504f4e;
-  border-left: 0.2em solid #504f4e;
+  border: 0.2em solid #504f4e;
   color: #545149;
   padding-bottom: 1%;
   font-size: 0.6em;

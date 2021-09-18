@@ -25,8 +25,7 @@ body {
 main  {
   background-color: f4f1ec;
   display: flex;;
-  padding-left:2em ;
-  padding-right: 2em;
+  padding-left:2e;
   flex-direction: column;
   margin-top: 0.35em;
   position: relative;
