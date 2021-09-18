@@ -27,7 +27,7 @@ main  {
   display: flex;;
   padding-left:2e;
   flex-direction: column;
-  margin-top: 0.35em;
+  margin-top: 0.35em 1em;
   position: relative;
   top: 5em;
   font-family: 'Times New Roman', Times, serif;

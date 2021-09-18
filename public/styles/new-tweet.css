@@ -2,6 +2,7 @@
 
   display: flex;
   flex-direction: column;
+  margin: 2em;
 
 }
 .alert1 {
@@ -46,9 +47,9 @@ button {
   color: #FFFFFF;
   padding: 0.6%;
 }
-.counter{
-  padding-left: 32em;
-}
+/* .counter{
+  padding-left: 40em;
+} */
 
 button:hover {
   box-shadow: 20px 15px 20px rgba(11, 87, 122, 0.4);
